@@ -80,4 +80,11 @@ PizzaElem.propTypes = {
   sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
+PizzaElem.defaultProps = {
+  name: '---',
+  price: 0,
+  types: [],
+  sizes: [],
+}
+
 export default PizzaElem;
