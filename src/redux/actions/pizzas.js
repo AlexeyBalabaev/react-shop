@@ -1,4 +1,4 @@
-const setPizzas = (catIndex) => ({
-  type: 'SET_CATEGORY',
-  payload: catIndex,
+export const setPizzas = (items) => ({
+  type: 'SET_PIZZAS',
+  payload: items,
 });
