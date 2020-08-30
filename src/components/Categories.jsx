@@ -20,7 +20,8 @@ const Categories = React.memo(function Categories({ items, onClickItem }) {
           items.map((name, index) => (
             <li 
               className={activeItem === index ? 'active' : ''}
-              onClick={() => onSelectItem(index)} key={`${name}_${index}`}>
+              onClick={() => onSelectItem(index)} 
+              key={`${name}_${index}`}>
               {name}
             </li>
           ))}
