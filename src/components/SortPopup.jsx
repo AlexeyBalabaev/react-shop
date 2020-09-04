@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const SortPopup = React.memo(function SortPopup({ items, activeSortType, onClickSortType }) {
   const [visiblePopup, setVisiblePopup] = React.useState(false);
   const sortRef = React.useRef();
-  const activeLabel = items.find((obj) => obj.type === activeSortType).name;
+  const activeLabel = items.find(obj => obj.type === activeSortType).name;
 
   const toggleVisiblePopup = () => {
     setVisiblePopup(!visiblePopup);
@@ -52,7 +52,7 @@ const SortPopup = React.memo(function SortPopup({ items, activeSortType, onClick
             {items && 
               items.map((obj, index) => (
                 <li 
-                  onClick={() => onSelectItem(obj.type)}
+                  onClick={() => onSelectItem(obj)}
                   className={activeSortType === obj.type ? 'active' : ''}
                   key={`${obj.type}_${index}`}>
                   {obj.name}
@@ -72,6 +72,7 @@ SortPopup.propTypes = {
 };
 
 SortPopup.defaultProps = {
+  activeSortType: 'popular',
   items: [],
 };
 
